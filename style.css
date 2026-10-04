@@ -1,0 +1,33 @@
+body {
+    background-color: #111;
+    color: white;
+    text-align: center;
+    font-family: Arial, sans-serif;
+}
+
+#jogo {
+    width: 600px;
+    height: 500px;
+    margin: 20px auto;
+    background-color: #050505;
+    border: 5px solid #0054a6;
+    position: relative;
+}
+
+.parede {
+    width: 150px;
+    height: 20px;
+    background-color: #0054a6;
+    position: absolute;
+    left: 50px;
+    top: 50px;
+}
+
+#professor {
+    width: 90px;
+    height: 90px;
+    position: absolute;
+    left: 250px;
+    top: 250px;
+    object-fit: contain;
+}
