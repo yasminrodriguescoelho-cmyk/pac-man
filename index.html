@@ -1,22 +1,83 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-    <head>
-        <meta charset="UTF-8">
-        <title>Fuga da Taça</title>
-<link rel="stylesheet" href="style.css">
-    </head>
-    <body>
-        <h1>Fuga da Taça</h1>
-        <p>Estrelas:0/5</p>
-        <div id="jogo">
-        <div class="parede"></div>
-    <img id="professor" src="professor.jpg"
-    alt="professor">
-    
-        </div>
 
-        </div>
-        <script src="jogo.js"></script>
-        
-    </body>
+<head>
+    <meta charset="UTF-8">
+
+    <title>Fuga da Taça</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <h1>Fuga da Taça</h1>
+
+    <p>Estrelas: 0/5</p>
+
+    <div id="jogo">
+
+        <!-- Borda do labirinto -->
+        <div class="parede borda"></div>
+
+        <!-- Parte de cima -->
+        <div class="parede h p1"></div>
+        <div class="parede h p2"></div>
+        <div class="parede h p3"></div>
+
+        <div class="parede v p4"></div>
+        <div class="parede v p5"></div>
+        <div class="parede v p6"></div>
+
+        <!-- Segunda parte -->
+        <div class="parede h p7"></div>
+        <div class="parede h p8"></div>
+        <div class="parede h p9"></div>
+        <div class="parede h p10"></div>
+
+        <div class="parede v p11"></div>
+        <div class="parede v p12"></div>
+        <div class="parede v p13"></div>
+        <div class="parede v p14"></div>
+
+        <!-- Laterais -->
+        <div class="parede h p15"></div>
+        <div class="parede h p16"></div>
+        <div class="parede h p17"></div>
+        <div class="parede h p18"></div>
+
+        <div class="parede v p19"></div>
+        <div class="parede v p20"></div>
+        <div class="parede v p21"></div>
+        <div class="parede v p22"></div>
+
+        <!-- Centro -->
+        <div class="parede h p23"></div>
+        <div class="parede h p24"></div>
+        <div class="parede h p25"></div>
+        <div class="parede h p26"></div>
+
+        <div class="parede v p27"></div>
+        <div class="parede v p28"></div>
+
+        <!-- Parte inferior -->
+        <div class="parede h p29"></div>
+        <div class="parede h p30"></div>
+        <div class="parede h p31"></div>
+        <div class="parede h p32"></div>
+
+        <div class="parede v p33"></div>
+        <div class="parede v p34"></div>
+        <div class="parede v p35"></div>
+        <div class="parede v p36"></div>
+
+        <!-- Professor -->
+        <img id="professor" src="professor.jpg" alt="Professor">
+
+    </div>
+
+    <script src="jogo.js"></script>
+
+</body>
+
 </html>
