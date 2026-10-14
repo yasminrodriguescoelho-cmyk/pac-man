@@ -1,19 +1,37 @@
 const professor = document.getElementById("professor");
+const jogo = document.getElementById("jogo");
+
+const paredes = document.querySelectorAll(".parede:not(.borda)");
 
 let x = 450;
 let y = 370;
 
+const velocidade = 5;
+
 professor.style.left = x + "px";
 professor.style.top = y + "px";
 
-document.addEventListener("keydown", function(event) {
+function bateuParede(novoX, novoY) {
+    const largura = professor.offsetWidth;
+    const altura = professor.offsetHeight;
 
-    if (event.key === "ArrowRight") x += 10;
-    if (event.key === "ArrowLeft") x -= 10;
-    if (event.key === "ArrowUp") y -= 10;
-    if (event.key === "ArrowDown") y += 10;
+    for (const parede of paredes) {
+        const paredeX = parede.offsetLeft;
+        const paredeY = parede.offsetTop;
+        const paredeLargura = parede.offsetWidth;
+        const paredeAltura = parede.offsetHeight;
 
-    professor.style.left = x + "px";
-    professor.style.top = y + "px";
+        if (
+            novoX < paredeX + paredeLargura &&
+            novoX + largura > paredeX &&
+            novoY < paredeY + paredeAltura &&
+            novoY + altura > paredeY
+        ) {
+            return true;
+        }
+    }
 
-});
+    return false;
+}
+
+function mover
